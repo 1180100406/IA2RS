@@ -70,7 +70,7 @@ class Planner:
         if isinstance(final_goal, torch.Tensor):
             final_goal = final_goal.detach().cpu().numpy()
 
-        x, _, ag, _, g, _, _, _, _, _, _ = self.replay_buffer.sample(self.initial_sample)
+        x, _, ag, _, g, _, _, _, _, _, _, _, _ = self.replay_buffer.sample(self.initial_sample)
         landmarks = ag.copy()
         state = x.copy()
         achieved_goal = ag.copy()
